@@ -49,7 +49,8 @@ body * {
 #container {
   /*border: 1px solid red; /*borda*/
 
-  width: 360px; /*largura*/
+  width: 100%; /*largura*/
+  max-width: 588px; /*largura máxima*/
   /*height: 712px;  /*altura*/
 
   /*centraliza

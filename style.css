@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*light theme*/
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.05);
+  --highlight-color: rgba(0, 0, 0, 0.2);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-position: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+
+  /*background: color image repeat position/size;*/
+  /*background: url(./assets/bg-mobile.jpg) no-repeat top center / cover; alterada para variável*/
+  background: var(--bg-url) no-repeat top center / cover;
+}
+
+/* * asteristico seletor universal*/
+body * {
+  font-family: "Inter", sans-serif;
+
+  /*color: #ffffff; alterada para variável*/
+  color: var(--text-color);
+}
+
+#container {
+  /*border: 1px solid red; /*borda*/
+
+  width: 360px; /*largura*/
+  /*height: 712px;  /*altura*/
+
+  /*centraliza
+  margin-right: auto; 
+  margin-left: auto; 
+  ou
+  margin: auto; /*centraliza
+  margin-top: 56px; /*espaçamento
+  ou*/
+  margin: 56px auto 0; /*espaçamento*/
+  padding: 24px; /*espaçamento*/
+}
+
+/*profile*/
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*switch*/
+#switch {
+  /*border: 1px solid red; /*borda*/
+  position: relative; /*posição*/
+  width: 64px; /*largura*/
+
+  margin: 4px auto; /*espaçamento*/
+}
+
+#switch button {
+  width: 32px; /*largura*/
+  height: 32px; /*altura*/
+
+  /*background:white url(./assets/moon-stars.svg) no-repeat center; /*cor de fundo*/ /*imagem* alterada pela variavel*/
+  background: white var(--switch-bg-url) no-repeat center;
+
+  border: 0; /*remove borda*/
+  border-radius: 50%; /*borda arredondada*/
+
+  position: absolute; /*posição*/
+  top: 50%; /*cima*/
+  left: 0; /*direita*/
+  z-index: 1;
+  transform: translateY(-50%); /*centraliza verticalmente*/
+}
+
+.light #switch button {
+  right: 0%; /*direita*/
+  left: initial; /*inicial*/
+}
+
+#switch span {
+  display: block; /*bloco*/
+  width: 64px; /*largura*/
+  height: 24px; /*altura*/
+  /*background: rgba(255, 255, 255, 0.1); /*cor de fundo* alterada para variável*/
+  background: var(--surface-color);
+
+  /* border: 1px solid rgba(255, 255, 255, 0.5); /*borda* alterada para variável*/
+  border: 1px solid var(--stroke-color);
+  border-radius: 9999px; /*borda arredondada*/
+  backdrop-filter: blur(4px); /*efeito de desfoque*/
+  --webkit-backdrop-filter: blur(4px); /*efeito de desfoque*/
+}
+
+/*links - listas */
+ul {
+  list-style: none;
+
+  display: flex; /*flexbox*/
+  flex-direction: column; /*coluna*/
+  gap: 16px; /*espaçamento*/
+
+  padding: 24px 0; /*espaçamento*/
+}
+
+ul li a {
+  /*border: 1px solid red;*/
+
+  display: flex; /*flexbox*/
+  align-items: center; /*centraliza*/
+  justify-content: center; /*centraliza*/
+
+  padding: 16px 24px; /*espaçamento*/
+
+  /*background: rgba(255, 255, 255, 0.1); /*cor de fundo* alterada para variável*/
+  background: var(--surface-color);
+
+  /* border: 1px solid rgba(255, 255, 255, 0.5); /*borda alterada para variável*/
+  border: 1px solid var(--stroke-color);
+
+  border-radius: 8px; /*borda arredondada*/
+
+  backdrop-filter: blur(4px); /*efeito de desfoque*/
+  -webkit-backdrop-filter: blur(4px); /*para navegadores antigos*/
+
+  text-decoration: none; /*remove sublinhado*/
+  font-weight: 500; /*negrito*/
+
+  transition: background 0.2s; /*transição*/
+}
+
+/*pseudo-seletor*/
+ul li a:hover {
+  /*background: rgba(255, 255, 255, 0.05); /*cor de fundo* alterada para variável*/
+  background: var(--surface-color-hover);
+
+  /*border: 1.5px solid white; /*borda alterada para variável*/
+  border: 1.5px solid var(--text-color);
+}
+
+/*social links */
+
+#social-links {
+  display: flex; /*flexbox*/
+  justify-content: center; /*centraliza*/
+
+  padding: 24px 0; /*espaçamento*/
+
+  font-size: 24px; /*tamanho da fonte*/
+}
+
+#social-links a {
+  display: flex; /*flexbox*/
+  align-items: center; /*centraliza*/
+  justify-content: center; /*centraliza*/
+  padding: 16px; /*espaçamento*/
+}
+
+#social-links a:hover {
+  /*background: rgba(255, 255, 255, 0.2); /*cor de fundo* alterada para variável*/
+  background: var(--highlight-color);
+
+  border-radius: 50%; /*borda arredondada*/
+}
+
+footer {
+  text-align: center;
+  padding: 24px 0; /*espaçamento*/
+  font-size: 12px; /*tamanho da fonte*/
+}

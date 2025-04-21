@@ -35,7 +35,8 @@ body {
 
   /*background: color image repeat position/size;*/
   /*background: url(./assets/bg-mobile.jpg) no-repeat top center / cover; alterada para variável*/
-  background: var(--bg-url) no-repeat top center / cover;
+  background: var(--bg-url) no-repeat top center / cover;/*imagem de fundo*/
+  height: 100vh; /*altura da tela*/
 }
 
 /* * asteristico seletor universal*/
@@ -200,4 +201,15 @@ footer {
   text-align: center;
   padding: 24px 0; /*espaçamento*/
   font-size: 12px; /*tamanho da fonte*/
+}
+
+/*media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg); /*imagem de fundo*/
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg); /*imagem de fundo*/
+  }
 }

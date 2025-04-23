@@ -43,9 +43,7 @@ Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figm
 
 <h3>📌 Considerações</h3>
 
-O projeto foi um inicio para obtenção de conhecimentos, e de testar minhas habilidades, para saber se estou pronto proximo nivel.
-
-O projeto está em andamento, preciso alterar as informações colocando os meus próprios dados.
+O projeto foi um inicio para obtenção de conhecimentos, e de testar minhas habilidades, para saber se estou pronto próximo nível.
 
 <h3>📌 Licença</h3>
 

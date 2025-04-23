@@ -17,11 +17,11 @@ function toggleMode() {
   if (html.classList.contains("light")) {
     //se tiver light mode adicionar a imagem light
     img.setAttribute("src", "./assets/avatar-light.png")
-    img.setAttribute("alt","foto de Mayk Brito sorrindo, usando óculos escuro e camisa preta, e fundo colorido")
+    img.setAttribute("alt","foto de Paulo sério, usando óculos escuro, e fundo colorido")
   } else {
     //se não tiver light mode adicionar a imagem normal
     img.setAttribute("src", "./assets/avatar.png")
-    img.setAttribute("alt","foto de Mayk Brito sorrindo, usando óculos e camisa preta, barba e fundo amarelo")
+    img.setAttribute("alt","foto de Paulo sorrindo, usando óculos e camisa azul, barba e fundo verde")
   }
 
   /*
